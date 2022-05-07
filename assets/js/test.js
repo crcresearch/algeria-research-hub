@@ -24,15 +24,15 @@ const initData = {
   userInput = document.getElementById('search-focus')
   console.log("userInput: ",userInput);
 
-  if(userInput.target.value.length > 0)
-  {
-    instance = new mdb.Datatable(document.getElementById('datatable'), initData)
-  }
-  else
+//   if(userInput.target.value.length > 0)
+//   {
+//     instance = new mdb.Datatable(document.getElementById('datatable'), initData)
+//   }
+//   else
     instance = new mdb.Datatable(document.getElementById('datatable'), data2)
 
   
-  document.getElementById('search-focus').addEventListener('input', (e) => 
+  document.getElementById('search-focus-table').addEventListener('input', (e) => 
   {
     instance.input-group(e.target.value);
     console.log("userInput: ");
