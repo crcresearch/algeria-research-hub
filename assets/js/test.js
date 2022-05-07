@@ -35,4 +35,5 @@ const initData = {
   document.getElementById('search-focus').addEventListener('input', (e) => 
   {
     instance.input-group(e.target.value);
+    console.log("userInput: ");
   });
