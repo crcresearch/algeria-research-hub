@@ -22,7 +22,6 @@ const initData = {
   };
   
   userInput = document.getElementById('search-focus')
-  console.log("userInput target: ",userInput.target);
 
     instance = new mdb.Datatable(document.getElementById('datatable'), data2)
 
@@ -30,5 +29,5 @@ const initData = {
   document.getElementById('search-focus-table').addEventListener('input', (e) => 
   {
     instance.input-group(e.target.value);
-    console.log("userInput: ");
+    console.log("userInput: ",e.target.value);
   });
