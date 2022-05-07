@@ -22,13 +22,13 @@ const initData = {
   };
   
   userInput = document.getElementById('search-focus')
-  console.log("userInput: ",userInput);
+  console.log("userInput target: ",userInput.target);
 
-//   if(userInput.target.value.length > 0)
-//   {
-//     instance = new mdb.Datatable(document.getElementById('datatable'), initData)
-//   }
-//   else
+  if(userInput.target.value.length > 0)
+  {
+    instance = new mdb.Datatable(document.getElementById('datatable'), initData)
+  }
+  else
     instance = new mdb.Datatable(document.getElementById('datatable'), data2)
 
   
