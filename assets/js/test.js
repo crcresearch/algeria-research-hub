@@ -22,8 +22,8 @@ const initData = {
   };
   
   userInput = document.getElementById('search-focus')
-
-    instance = new mdb.Datatable(document.getElementById('datatable'), data2)
+  
+  instance = new mdb.Datatable(document.getElementById('datatable'), data2)
 
   
   document.getElementById('search-focus-table').addEventListener('input', (e) => 
