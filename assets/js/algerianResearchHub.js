@@ -1,10 +1,10 @@
 /*!
 
  =========================================================
- * Gaia Bootstrap Template PRO - v1.0.1
+ * AlgeriaResearchHub Bootstrap Template PRO - v1.0.1
  =========================================================
 
- * Product Page: https://www.creative-tim.com/product/gaia-bootstrap-template-pro
+ * Product Page: https://www.creative-tim.com/product/algeriaResearchHub-bootstrap-template-pro
  * Copyright 2019 Creative Tim (https://www.creative-tim.com)
 
  * Coded by Creative Tim
@@ -55,7 +55,7 @@ $(document).ready(function(){
 
     // Init navigation toggle for small screens
     if(window_width < 992 || burger_menu){
-        gaia.initRightMenu();
+        algeriaResearchHub.initRightMenu();
     }
 
     if($('.content-with-opacity').length != 0){
@@ -69,7 +69,7 @@ $(document).ready(function(){
         var lng = $(this).data('lng');
         var lat = $(this).data('lat');
 
-        gaia.initGoogleMaps(this, lat, lng);
+        algeriaResearchHub.initGoogleMaps(this, lat, lng);
     });
 
 });
@@ -77,27 +77,27 @@ $(document).ready(function(){
 //activate collapse right menu when the windows is resized
 $(window).resize(function(){
     if($(window).width() < 992){
-        gaia.initRightMenu();
-        //gaia.checkResponsiveImage();
+        algeriaResearchHub.initRightMenu();
+        //algeriaResearchHub.checkResponsiveImage();
     }
     if($(window).width() > 992 && !burger_menu){
         $('nav[role="navigation"]').removeClass('navbar-burger');
-        gaia.misc.navbar_menu_visible = 1;
+        algeriaResearchHub.misc.navbar_menu_visible = 1;
         navbar_initialized = false;
     }
 });
 
 $(window).on('scroll',function(){
 
-    gaia.checkScrollForTransparentNavbar();
+    algeriaResearchHub.checkScrollForTransparentNavbar();
 
 
     if(window_width > 992){
-        gaia.checkScrollForParallax();
+        algeriaResearchHub.checkScrollForParallax();
     }
 
     if(content_opacity == 1 ){
-        gaia.checkScrollForContentTransitions();
+        algeriaResearchHub.checkScrollForContentTransitions();
     }
 
 });
@@ -116,7 +116,7 @@ $('a[data-scroll="true"]').click(function(e){
 
 });
 
-gaia = {
+algeriaResearchHub = {
     misc:{
         navbar_menu_visible: 0
     },
@@ -126,9 +126,9 @@ gaia = {
             $toggle = $('.navbar-toggle');
             $toggle.click(function (){
 
-                if(gaia.misc.navbar_menu_visible == 1) {
+                if(algeriaResearchHub.misc.navbar_menu_visible == 1) {
                     $('html').removeClass('nav-open');
-                    gaia.misc.navbar_menu_visible = 0;
+                    algeriaResearchHub.misc.navbar_menu_visible = 0;
                     $('#bodyClick').remove();
                      setTimeout(function(){
                         $toggle.removeClass('toggled');
@@ -142,7 +142,7 @@ gaia = {
                     div = '<div id="bodyClick"></div>';
                     $(div).appendTo("body").click(function() {
                         $('html').removeClass('nav-open');
-                        gaia.misc.navbar_menu_visible = 0;
+                        algeriaResearchHub.misc.navbar_menu_visible = 0;
                         $('#bodyClick').remove();
                          setTimeout(function(){
                             $toggle.removeClass('toggled');
@@ -150,7 +150,7 @@ gaia = {
                     });
 
                     $('html').addClass('nav-open');
-                    gaia.misc.navbar_menu_visible = 1;
+                    algeriaResearchHub.misc.navbar_menu_visible = 1;
 
                 }
             });
