@@ -1,10 +1,10 @@
 /*!
 
  =========================================================
- * Gaia Bootstrap Template PRO - v1.0.1
+ * algeriaResearchHub Bootstrap Template PRO - v1.0.1
  =========================================================
 
- * Product Page: https://www.creative-tim.com/product/gaia-bootstrap-template-pro
+ * Product Page: https://www.creative-tim.com/product/algeriaResearchHub-bootstrap-template-pro
  * Copyright 2019 Creative Tim (https://www.creative-tim.com)
 
  * Coded by Creative Tim
@@ -198,7 +198,7 @@ a:hover {
 
 .text-gold,
 .title-gold {
-  color: #c5a47e;
+  color: #C9972C;
 }
 
 .quotes {
@@ -845,10 +845,12 @@ a.carousel-control span.fa {
   border-top-color: #f88f58;
 }
 
+
+/* top  nav buttons */
 .btn-danger,
 .navbar .navbar-nav > li > a.btn-danger {
-  border-color: #e78b90;
-  color: #e78b90;
+  border-color: #C9972C;
+  color: #C9972C;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle,
 .navbar .navbar-nav > li > a.btn-danger:hover,
@@ -857,20 +859,20 @@ a.carousel-control span.fa {
 .navbar .navbar-nav > li > a.btn-danger.active, .open >
 .navbar .navbar-nav > li > a.btn-danger.dropdown-toggle {
   background-color: transparent;
-  color: #e47a80;
-  border-color: #e47a80;
+  color: #C9972C;
+  border-color: #C9972C;
 }
 .btn-danger:disabled, .btn-danger[disabled], .btn-danger.disabled,
 .navbar .navbar-nav > li > a.btn-danger:disabled,
 .navbar .navbar-nav > li > a.btn-danger[disabled],
 .navbar .navbar-nav > li > a.btn-danger.disabled {
   background-color: transparent;
-  border-color: #e78b90;
+  border-color: #C9972C;
 }
 .btn-danger.btn-fill,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill {
   color: #FFFFFF;
-  background-color: #e78b90;
+  background-color: #C9972C;
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -880,7 +882,7 @@ a.carousel-control span.fa {
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:active,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.active, .open >
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.dropdown-toggle {
-  background-color: #e47a80;
+  background-color: #C9972C;
   color: #FFFFFF;
 }
 .btn-danger.btn-fill .caret,
@@ -889,7 +891,7 @@ a.carousel-control span.fa {
 }
 .btn-danger .caret,
 .navbar .navbar-nav > li > a.btn-danger .caret {
-  border-top-color: #e78b90;
+  border-top-color: #C9972C;
 }
 
 .btn-black,
