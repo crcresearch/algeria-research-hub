@@ -265,11 +265,12 @@ a:hover {
   border-color: #f88f58;
 }
 
-.separator-danger {
-  color: #e78b90;
+/* separator color change to Gold #C9972C */
+.separator-gold {
+  color: #C9972C;
 }
-.separator-danger:before, .separator-danger:after {
-  border-color: #e78b90;
+.separator-gold:before, .separator-blue:after {
+  border-color: #C9972C;
 }
 
 p.description {
@@ -1381,8 +1382,9 @@ a.carousel-control span.fa {
 .filter.filter-color-green:before {
   background: #55bea4;
 }
+/* filter color #18519E */
 .filter.filter-color-blue:before {
-  background: #008b9c;
+  background: #18519E;
 }
 .filter.filter-color-purple:before {
   background: #50236F;
