@@ -1504,7 +1504,7 @@ a.carousel-control span.fa {
 .section-small .static-image .image,
 .section-get-started .parallax .image,
 .section-get-started .static-image .image {
-  height: 100vh !important;
+  height: 50vh !important;
 }
 
 .section-info {
@@ -3540,8 +3540,11 @@ body.noscroll {
 
 .section-header-blog .parallax,
 .section-header-about .parallax,
+.section-header-index .parallax,
+.section-header-learningModules .parallax,
+.section-header-fundingOpportunities .parallax,
 .section-presentation-page .parallax {
-  height: 70vh;
+  height: 35vh;
 }
 
 .section-card-blog {
@@ -3850,9 +3853,9 @@ body.noscroll {
     padding-right: 0;
     padding-left: 0;
   }
-  .section-we-made-1 .transition-1 {
-    /*     		transition: all 0.5s; */
-  }
+  /* .section-we-made-1 .transition-1 {
+        		transition: all 0.5s; 
+   } */ 
 
   .section-we-made-2 .scroll-area {
     width: 70%;
