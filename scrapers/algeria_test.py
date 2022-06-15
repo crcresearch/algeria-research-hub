@@ -7,6 +7,11 @@ AIRTABLE_API_KEY = 'key77vbawxykDygId'
 AIRTABLE_BASE_ID = 'appyLuakMhHhy0IpY'
 AIRTABLE_TABLE_NAME = 'Grants.gov'
 
+GRANTS_GOV_KEYWORDS = [
+    'Algeria',
+    'MENA'
+]
+
 airtable_api = airtable.Airtable(AIRTABLE_BASE_ID, AIRTABLE_API_KEY)
 
 
@@ -18,7 +23,8 @@ current_page = 1
 # each page has 25 results, starting with index: 0.
 # this means results 0-24 are on the first page, the second page has results 25-49, and so on
 start_record_num = ((current_page - 1) * 25)
-post_data = '{"startRecordNum":"'+str(start_record_num)+'","keyword":"Algeria","oppNum":"","cfda":"","oppStatuses":"forecasted|posted"}'
+keyword_phrase = '%2C%20'.join(GRANTS_GOV_KEYWORDS)
+post_data = '{"startRecordNum":"'+str(start_record_num)+'","keyword":"'+keyword_phrase+'","oppNum":"","cfda":"","oppStatuses":"forecasted|posted"}'
 
 # DON'T CHANGE THE FOLLOWING LINES:
 post_url = 'https://www.grants.gov/grantsws/rest/opportunities/search/'
@@ -50,7 +56,7 @@ while len(master_hits) < int(total_hits):
     current_page += 1
     start_record = ((current_page - 1) * 25)
     # update the post data to hold the new "starting record" number
-    post_data = '{"startRecordNum":"'+str(start_record)+'","keyword":"Algeria","oppNum":"","cfda":"","oppStatuses":"forecasted|posted"}'
+    post_data = '{"startRecordNum":"'+str(start_record)+'","keyword":"'+keyword_phrase+'","oppNum":"","cfda":"","oppStatuses":"forecasted|posted"}'
     # ...and make a new post request
     response = requests.post(post_url, headers=headers, data=post_data)
     json_response = json.loads(response.text)
