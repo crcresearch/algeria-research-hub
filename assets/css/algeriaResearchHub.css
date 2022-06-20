@@ -480,7 +480,6 @@ body > .navbar-collapse a {
   opacity: 1;
 }
 
-/* BUTTONS */
 .form-control {
   border-color: #d0cdbc;
 }
@@ -846,12 +845,10 @@ a.carousel-control span.fa {
   border-top-color: #f88f58;
 }
 
-
-/* top  nav buttons */
 .btn-danger,
-.navbar .navbar-nav > li > a.btn-danger {
-  border-color: #C9972C;
-  color: #C9972C;
+.navbar .navbar-nav > li > a.danger {
+  border-color: #ffffff;
+  color: #ffffff;
 }
 .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .open > .btn-danger.dropdown-toggle,
 .navbar .navbar-nav > li > a.btn-danger:hover,
@@ -860,42 +857,103 @@ a.carousel-control span.fa {
 .navbar .navbar-nav > li > a.btn-danger.active, .open >
 .navbar .navbar-nav > li > a.btn-danger.dropdown-toggle {
   background-color: transparent;
-  color: #C9972C;
-  border-color: #C9972C;
+  color: #e78b90;
+  border-color: #e78b90;
 }
-.btn-danger:disabled, .btn-danger[disabled], .btn-danger.disabled,
-.navbar .navbar-nav > li > a.btn-danger:disabled,
-.navbar .navbar-nav > li > a.btn-danger[disabled],
-.navbar .navbar-nav > li > a.btn-danger.disabled {
+.btn-danger:disabled, .btn-danger[disabled], .btn-danger.disabled, .navbar .navbar-nav > li > a.btn-danger:disabled, .navbar .navbar-nav > li > a.btn-danger[disabled], .navbar .navbar-nav > li > a.btn-danger.disabled {
   background-color: transparent;
-  border-color: #C9972C;
+  border-color: #e78b90;
 }
+
 .btn-danger.btn-fill,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill {
-  color: #FFFFFF;
-  background-color: #C9972C;
+  color: #e78b90;
+  background-color: #e78b90;
   opacity: 1;
   filter: alpha(opacity=100);
 }
-.btn-danger.btn-fill:hover, .btn-danger.btn-fill:focus, .btn-danger.btn-fill:active, .btn-danger.btn-fill.active, .open > .btn-danger.btn-fill.dropdown-toggle,
+
+.btn-danger.btn-fill:hover, 
+.btn-danger.btn-fill:focus, 
+.btn-danger.btn-fill:active, 
+.btn-danger.btn-fill.active, 
+.open > .btn-danger.btn-fill.dropdown-toggle,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:hover,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:focus,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill:active,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.active, .open >
 .navbar .navbar-nav > li > a.btn-danger.btn-fill.dropdown-toggle {
-  background-color: #C9972C;
-  color: #FFFFFF;
+  background-color: #e78b90;
+  color: #e78b90;
 }
+
 .btn-danger.btn-fill .caret,
 .navbar .navbar-nav > li > a.btn-danger.btn-fill .caret {
   border-top-color: #FFFFFF;
 }
+
 .btn-danger .caret,
 .navbar .navbar-nav > li > a.btn-danger .caret {
-  border-top-color: #C9972C;
+  border-top-color: #e78b90;
 }
 
+
+
+
 .btn-black,
+.navbar .navbar-nav > li > a.btn-black {
+  border-color: #333333;
+  color: #C9972C;
+}
+.btn-black:hover, .btn-black:focus, .btn-black:active, .btn-black.active, .open > .btn-black.dropdown-toggle,
+.navbar .navbar-nav > li > a.btn-black:hover,
+.navbar .navbar-nav > li > a.btn-black:focus,
+.navbar .navbar-nav > li > a.btn-black:active,
+.navbar .navbar-nav > li > a.btn-black.active, .open >
+.navbar .navbar-nav > li > a.btn-black.dropdown-toggle {
+  background-color: transparent;
+  color: #C9972C;
+  border-color: #393b3d;
+}
+/* .navbar .navbar-nav > li > a.btn-black:active{
+  background-color: transparent;
+  color: #C9972C;
+  border-color: #C9972C;
+} */
+.btn-black:disabled, .btn-black[disabled], .btn-black.disabled,
+.navbar .navbar-nav > li > a.btn-black:disabled,
+.navbar .navbar-nav > li > a.btn-black[disabled],
+.navbar .navbar-nav > li > a.btn-black.disabled {
+  background-color: transparent;
+  border-color: #C9972C;
+}
+.btn-black.btn-fill,
+.navbar .navbar-nav > li > a.btn-black.btn-fill {
+  color: #FFFFFF;
+  background-color: #C9972C;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.btn-black.btn-fill:hover, .btn-black.btn-fill:focus, .btn-black.btn-fill:active, .btn-black.btn-fill.active, .open > .btn-black.btn-fill.dropdown-toggle,
+.navbar .navbar-nav > li > a.btn-black.btn-fill:hover,
+.navbar .navbar-nav > li > a.btn-black.btn-fill:focus,
+.navbar .navbar-nav > li > a.btn-black.btn-fill:active,
+.navbar .navbar-nav > li > a.btn-black.btn-fill.active, .open >
+.navbar .navbar-nav > li > a.btn-black.btn-fill.dropdown-toggle {
+  background-color: #C9972C;
+  color: #FFFFFF;
+}
+.btn-black.btn-fill .caret,
+.navbar .navbar-nav > li > a.btn-black.btn-fill .caret {
+  border-top-color: #FFFFFF;
+}
+.btn-black .caret,
+.navbar .navbar-nav > li > a.btn-black .caret {
+  border-top-color: #C9972C;
+} 
+
+
+/* .btn-black,
 .navbar .navbar-nav > li > a.btn-black {
   border-color: #333333;
   color: #333333;
@@ -940,7 +998,7 @@ a.carousel-control span.fa {
 .btn-black .caret,
 .navbar .navbar-nav > li > a.btn-black .caret {
   border-top-color: #333333;
-}
+} */
 
 .btn-white,
 .navbar .navbar-nav > li > a.btn-white {
