@@ -7,8 +7,6 @@
 * Product Page: https://www.creative-tim.com/product/algeriaResearchHub-bootstrap-template-pro
 * Copyright 2019 Creative Tim (https://www.creative-tim.com)
 
-* Coded by Creative Tim
-
 =========================================================
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
@@ -20,8 +18,8 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png">
+    <!-- <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon.png"> -->
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title> Funding Opportunities | Algerian Research Hub </title>
@@ -71,12 +69,13 @@
 
     <div class="section section-header section-header-fundingOpportunities">
         <div class="parallax filter filter-color-blue">
-            <div class="image" style="background-image:url('../assets/img/AG-map.jpeg')">
+            <div class="image"
+                style="background-image:url('../assets/img/AG-map.jpeg'); filter:blur(3px); opacity: 0.6">
             </div>
             <div class="container">
                 <div class="content">
                     <div class="title-area">
-                        <h1> Funding Opportunities </h1>
+                        <h1 class="title-modern"> Funding Opportunities </h1>
                         <div class="separator line-separator-gold">✻</div>
                     </div>
                 </div>
@@ -106,26 +105,25 @@
                     <li>
                         <div class="image-container">
                             <img src="/assets/img/nd.jpg" alt="footer logo"
-                                style="width:150px; height:70px; padding-top:1em;" />
+                                style="width:auto; height:60px; padding-top:1em;" />
                         </div>
                     </li>
                     <li>
                         <div class="image-container">
                             <img src="/assets/img/usaFlag.jpg" alt="footer logo"
-                                style="width:120px; height:100px; padding-top:1em; padding-bottom: 1em;" />
+                                style="width:auto; height:100px; padding-top:1em; padding-bottom: 1em;" />
                         </div>
                     </li>
                     <li>
                         <div class="image-container">
-                            <img src="/assets/img/DOS2.png" alt="footer logo" style="width:100px; height:100px;" />
+                            <img src="/assets/img/DOS2.png" alt="footer logo" style="width:100px; height:auto;" />
                         </div>
-                    </li>
-                    <li>
-                        <a href="https://crc.nd.edu/" target="_blank">Contact Us</a>
                     </li>
                 </ul>
             </nav>
-
+            <div class="contanct-info pull-right">
+                <a href="https://crc.nd.edu/" target="Algeria Research Hub" class="btn btn-simple">contact</a>
+            </div>
         </div>
     </footer>
 
