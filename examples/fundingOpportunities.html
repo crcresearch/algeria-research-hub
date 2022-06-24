@@ -35,7 +35,7 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="50">
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="50" id="topnav">
         <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
         <div class="container">
             <div class="navbar-header">
@@ -72,7 +72,7 @@
             <div class="image"
                 style="background-image:url('../assets/img/AG-map.jpeg'); filter:blur(3px); opacity: 0.6">
             </div>
-            <div class="container">
+            <div class="container" id="titleheader">
                 <div class="content">
                     <div class="title-area">
                         <h1 class="title-modern"> Funding Opportunities </h1>
@@ -141,5 +141,8 @@
 
 <!--   file where we handle all the script from the algeriaResearchHub - Bootstrap Template   -->
 <script type="text/javascript" src="../assets/js/algeriaResearchHub.js"></script>
+
+<!-- makes the top nav buttons stick to the bottom of the header -->
+<script type="text/javascript" src="../assets/js/stickyheader.js"></script>
 
 </html>

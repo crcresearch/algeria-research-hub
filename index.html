@@ -37,7 +37,7 @@
 
 <body>
 
-    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="40">
+    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="40" id="topnav">
         <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
         <div class="container">
             <div class="navbar-header">
@@ -76,7 +76,7 @@
         <div class="parallax filter filter-color-blue">
             <div class="image" style="background-image:url('assets/img/AG-map.jpeg'); filter:blur(3px); opacity: 0.6">
             </div>
-            <div class="container">
+            <div class="container" id="titleheader">
                 <div class="content">
                     <h1 class="title-modern">Algeria Research Hub</h1>
                     <div class="separator separator-gold">♦</div>
@@ -143,5 +143,8 @@
 
 <!--   file where we handle all the script from the algeriaResearchHub - Bootstrap Template   -->
 <script type="text/javascript" src="assets/js/algeriaResearchHub.js"></script>
+
+<!-- makes the top nav buttons stick to the bottom of the header -->
+<script type="text/javascript" src="assets/js/stickyheader.js"></script>
 
 </html>

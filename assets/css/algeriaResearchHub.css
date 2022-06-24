@@ -1714,6 +1714,7 @@ a.carousel-control span.fa {
 
 .navbar.navbar-fixed-top {
   transition: all .5s .1s;
+  transition-delay: 0ms;
 }
 
 @media (min-width: 768px) {
