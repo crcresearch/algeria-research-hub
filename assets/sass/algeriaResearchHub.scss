@@ -1,0 +1,47 @@
+/*!
+
+ =========================================================
+ * AlgeriaResearchHub Bootstrap Template PRO - v1.0.1
+ =========================================================
+
+ * Product Page: https://www.creative-tim.com/product/algeriaResearchHub-bootstrap-template-pro
+ * Copyright 2019 Creative Tim (https://www.creative-tim.com)
+
+ * Coded by Creative Tim
+
+ =========================================================
+
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+ */
+
+@import "algeriaResearchHub/variables";
+@import "algeriaResearchHub/mixins";
+
+@import "algeriaResearchHub/typography";
+
+// Core CSS
+@import "algeriaResearchHub/misc";
+@import "algeriaResearchHub/buttons";
+@import "algeriaResearchHub/inputs";
+@import "algeriaResearchHub/sections";
+@import "algeriaResearchHub/navbars";
+@import "algeriaResearchHub/footers";
+@import "algeriaResearchHub/labels";
+@import "algeriaResearchHub/social-buttons";
+@import "algeriaResearchHub/dropdown";
+@import "algeriaResearchHub/carousel";
+
+// Template
+@import "algeriaResearchHub/cards";
+@import "algeriaResearchHub/headers";
+@import "algeriaResearchHub/projects";
+@import "algeriaResearchHub/clients";
+@import "algeriaResearchHub/team";
+@import "algeriaResearchHub/numbers";
+@import "algeriaResearchHub/contact";
+@import "algeriaResearchHub/closure";
+@import "algeriaResearchHub/example-pages";
+
+// Responsive Adjustments
+@import "algeriaResearchHub/responsive";
