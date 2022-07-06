@@ -28,6 +28,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install requests
+        pip install airtable-python-wrapper
     - name: Run the python scrapper script
       run: |
         python .github/workflows/arhscrapper.py
