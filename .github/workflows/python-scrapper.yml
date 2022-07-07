@@ -3,13 +3,11 @@
 name: Python web scrapper
 
 on:
-  #Allow job to run manually
-  #workflow_dispatch:
   #Trigger the workflow on daily basis (To update the funding request page)
   schedule:
     #schedule runs every day at 0:00 (mid-night)
-    #- cron: "5 0 * * *"
-    - cron: "5 * * * *"
+    - cron: "0 0 * * *"
+    
 
 
 jobs:
