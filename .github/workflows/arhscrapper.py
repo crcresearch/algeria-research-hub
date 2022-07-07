@@ -96,4 +96,4 @@ for record in master_hits:
     }
     # create the record
     airtable_api.create(AIRTABLE_TABLE_NAME, data)
-Footer
+#Footer
