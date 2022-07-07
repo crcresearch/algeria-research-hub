@@ -3,9 +3,9 @@ from airtable import airtable
 # https://pypi.org/project/airtable/
 import json
 
-AIRTABLE_API_KEY = 'key77vbawxykDygId'
-AIRTABLE_BASE_ID = 'appyLuakMhHhy0IpY'
-AIRTABLE_TABLE_NAME = 'Grants.gov'
+AIRTABLE_API_KEY = 'keyf60ogtVk1EdrOx'
+AIRTABLE_BASE_ID = 'appOsAavm2qNIJAOp'
+AIRTABLE_TABLE_NAME = 'fundingdb'
 
 GRANTS_GOV_KEYWORDS = [
     'Algeria',
