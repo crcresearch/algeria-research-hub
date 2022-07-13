@@ -9,7 +9,8 @@ AIRTABLE_TABLE_NAME = 'fundingdb'
 
 GRANTS_GOV_KEYWORDS = [
     'Algeria',
-    'MENA'
+    'MENA',
+    'Middle East and Northern Africa'
 ]
 
 airtable_api = airtable.Airtable(AIRTABLE_BASE_ID, AIRTABLE_API_KEY)
