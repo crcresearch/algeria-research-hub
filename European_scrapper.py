@@ -1,12 +1,13 @@
+from doctest import master
 import requests
 from airtable import airtable
 # https://pypi.org/project/airtable/
 import json
-import xmltodict, json
+from dateutil.parser import parse
 
-AIRTABLE_API_KEY = 'keyf60ogtVk1EdrOx'
-AIRTABLE_BASE_ID = 'app2PVSiSWXA6G3Ip'
-AIRTABLE_TABLE_NAME = 'Europe'
+AIRTABLE_API_KEY = 'key77vbawxykDygId'
+AIRTABLE_BASE_ID = 'appyLuakMhHhy0IpY'
+AIRTABLE_TABLE_NAME = 'European'
 
 EUROPEAN_COMMISION_KEYWORDS = [
     'Algeria',
@@ -19,11 +20,16 @@ airtable_api = airtable.Airtable(AIRTABLE_BASE_ID, AIRTABLE_API_KEY)
 current_page = 1
 
 start_record_num = current_page
-keyword_phrase = '%2C%20'.join(EUROPEAN_COMMISION_KEYWORDS)
-post_data = '{"startRecordNum":"'+str(start_record_num)+'","keyword":"'+keyword_phrase+'","oppNum":"","cfda":"","oppStatuses":"forecasted|posted"}'
+keyword_phrase = ', '.join(EUROPEAN_COMMISION_KEYWORDS)
+post_data = {
+    "apiKey": "SEDIA",
+    "text": keyword_phrase+"*",
+    "pageSize": "1000",
+    "pageNumber": "1",
+}
 
 # DON'T CHANGE THE FOLLOWING LINES:
-post_url = 'https://api.tech.ec.europa.eu/search-api/prod/rest/search'
+post_url = "https://api.tech.ec.europa.eu/search-api/prod/rest/search"
 headers = {
     'Content-Type': 'application/json; charset=utf-8',
 }
@@ -32,13 +38,26 @@ headers = {
 master_hits = []
 
 # make the first response.  This will give us results, AND how many results total to expect
-response = requests.post(post_url, headers=headers, data=post_data)
+response = requests.post(
+    post_url,
+    headers=headers,
+    params=post_data,
+    data='-----------------------------280098105110154896432867507591\r\nContent-Disposition: form-data; name="query"; filename="blob"\r\nContent-Type: application/json\r\n\r\n{"bool":{"must":[{"terms":{"type":["0","1","2","8"]}},{"terms":{"status":["31094501","31094502","31094503"]}}]}}\r\n-----------------------------280098105110154896432867507591\r\nContent-Disposition: form-data; name="languages"; filename="blob"\r\nContent-Type: application/json\r\n\r\n["en"]\r\n-----------------------------280098105110154896432867507591\r\nContent-Disposition: form-data; name="sort"; filename="blob"\r\nContent-Type: application/json\r\n\r\n{"field":"sortStatus","order":"ASC"}\r\n-----------------------------280098105110154896432867507591--\r\n'
+)
 
 #print the responses
-print ("response.text: ",response.text)
+# print ("response.text: ",response.text)
 
 # convert it to JSON (the output is xml)
-#json_response = json.load(response.text)
+json_response = json.loads(response.text)
+distinct_results = {}
+for result in json_response['results']:
+    if result['content'] != '' and result['content'] not in distinct_results:
+        distinct_results[result['content']] = result
+
+for result,data in distinct_results.items():
+    master_hits.append(data)
+
 
 # grab the total hit count -- this is what we'll use to tell when we've gathered all of the results
 #total_hits = json_response['hitCount']
@@ -84,19 +103,21 @@ for record in master_hits:
     # for open date and close date, some of them are empty strings (not sure why?)
     # so we need to pass in a `None` value rather than the empty string as Airtables can't parse an empty string as a date
     open_date = None
-    if record['openDate'] != '':
-        open_date = record['openDate'].replace(' ', '')
+    if record['metadata']['startDate'] != '':
+        open_date = record['metadata']['startDate'][0]
+        open_date = parse(open_date).strftime('%Y-%m-%d')
     close_date = None
-    if record['closeDate'] != '':
-        close_date = record['closeDate'].replace(' ', '')
+    if 'deadlineDate' in record['metadata'] and len(record['metadata']['deadlineDate']) > 0:
+        close_date = record['metadata']['deadlineDate'][-1]
+        close_date = parse(close_date).strftime('%Y-%m-%d')
     
     # data: assemble! :mjolnir:
     data = {
-        'Title': record['title'],
+        'Title': record['content'],
         'Posted Date': open_date,
-        'Close Date': close_date,
-        #'Link': "https://www.grants.gov/web/grants/view-opportunity.html?oppId={record['id']}"
-        'Link': "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic/={record['id']"
-    }
+        'Closed Date': close_date,
+        'Link': f"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic/{record['metadata']['identifier'][0].lower()}"
+    }          
+    print(data)   
     # create the record
     airtable_api.create(AIRTABLE_TABLE_NAME, data)
