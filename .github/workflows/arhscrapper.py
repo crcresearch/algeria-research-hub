@@ -92,7 +92,7 @@ for record in master_hits:
     data = {
         'Title': record['title'],
         'Posted Date': open_date,
-        'Close Date': close_date,
+        'Closed Date': close_date,
         'Link': f"https://www.grants.gov/web/grants/view-opportunity.html?oppId={record['id']}"
     }
     # create the record
