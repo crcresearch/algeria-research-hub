@@ -5,8 +5,8 @@ from airtable import airtable
 import json
 from dateutil.parser import parse
 
-AIRTABLE_API_KEY = 'key77vbawxykDygId'
-AIRTABLE_BASE_ID = 'appyLuakMhHhy0IpY'
+AIRTABLE_API_KEY = 'keyf60ogtVk1EdrOx'
+AIRTABLE_BASE_ID = 'appOsAavm2qNIJAOp'
 AIRTABLE_TABLE_NAME = 'European'
 
 EUROPEAN_COMMISION_KEYWORDS = [
