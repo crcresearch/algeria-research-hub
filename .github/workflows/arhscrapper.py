@@ -4,9 +4,10 @@ from airtable import airtable
 # https://pypi.org/project/airtable/
 import json
 from dateutil.parser import parse
+import os
 
-AIRTABLE_API_KEY = 'keyf60ogtVk1EdrOx'
-AIRTABLE_BASE_ID = 'appOsAavm2qNIJAOp'
+AIRTABLE_API_KEY = 'AIRTABLE_API_KEY'
+AIRTABLE_BASE_ID = 'AIRTABLE_BASE_ID'
 AIRTABLE_TABLE_NAME = 'Funding Requests'
 
 GRANTS_GOV_KEYWORDS = [
