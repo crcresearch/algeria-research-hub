@@ -3,10 +3,11 @@
 name: Python web scrapper
 
 on:
+  workflow_dispatch:
   #Trigger the workflow on daily basis (To update the funding request page)
-  schedule:
+  #schedule:
     #schedule runs every day at 0:00 (mid-night)
-    - cron: "0 0 * * *"
+    #- cron: "0 0 * * *"
     
 
 
@@ -22,18 +23,17 @@ jobs:
         python-version: '3.x' #Version range or exact version of a python version to use, using semVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Default to x64 if not scpecified
         
+    - name: Encrypt the Airtable Key and Base ID
+      env: 
+        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+        AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
+        
     - name: Install dependencies
       run: |
         pip install requests
         pip install airtable
         pip install python-dateutil
         pip install os
-        
-    - name: Encrypt the Airtable Key and Base ID
-      env: 
-        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
-        AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-        
         
     - name: Run the python scrapper script
       run: |
