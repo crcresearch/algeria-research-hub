@@ -27,6 +27,12 @@ jobs:
         pip install requests
         pip install airtable
         pip install python-dateutil
+        pip install os
+        
+    - name: Encrypt the Airtable Key and Base ID
+      env: 
+        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+        AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
         
         
     - name: Run the python scrapper script
