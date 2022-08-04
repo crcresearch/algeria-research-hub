@@ -23,11 +23,6 @@ jobs:
         python-version: '3.x' #Version range or exact version of a python version to use, using semVer's version range syntax
         architecture: 'x64' # optional x64 or x86. Default to x64 if not scpecified
         
-    - name: Encrypt the Airtable Key and Base ID
-      env: 
-        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
-        AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-        
     - name: Install dependencies
       run: |
         pip install requests
@@ -36,5 +31,8 @@ jobs:
         pip install os
         
     - name: Run the python scrapper script
+      env: 
+        AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
+        AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
       run: |
         python .github/workflows/arhscrapper.py
