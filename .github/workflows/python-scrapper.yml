@@ -29,7 +29,7 @@ jobs:
         pip install requests
         pip install airtable
         pip install python-dateutil
-        python3 -m pip install os
+        #python3 -m pip install os
         
     - name: Run the python scrapper script
       env: 
