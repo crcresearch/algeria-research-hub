@@ -3,13 +3,11 @@
 name: Python web scrapper
 
 on:
-  workflow_dispatch:
   #Trigger the workflow on daily basis (To update the funding request page)
-  #schedule:
+  schedule:
     #schedule runs every day at 0:00 (mid-night)
-    #- cron: "0 0 * * *"
+    - cron: "0 0 * * *"
     
-
 
 jobs:
   build:
@@ -29,7 +27,6 @@ jobs:
         pip install requests
         pip install airtable
         pip install python-dateutil
-        #python3 -m pip install os
         
     - name: Run the python scrapper script
       env: 
