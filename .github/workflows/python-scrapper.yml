@@ -33,4 +33,4 @@ jobs:
         AIRTABLE_BASE_ID: ${{ secrets.AIRTABLE_BASE_ID }}
         AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
       run: |
-        python .github/workflows/arhscrapper.py
+        python scraper.py
