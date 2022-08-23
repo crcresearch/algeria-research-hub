@@ -5,7 +5,7 @@ name: Python application
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   #Trigger the workflow on daily basis (To update the funding request page)
   schedule:
      - cron: "34 18 * * *"
