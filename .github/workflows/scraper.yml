@@ -10,7 +10,7 @@ on:
     branches: [ "master" ]
   #Trigger the workflow on daily basis (To update the funding request page)
   schedule:
-     - cron: "0 0 * * *"
+     - cron: "34 18 * * *"
 
 permissions:
   contents: read
