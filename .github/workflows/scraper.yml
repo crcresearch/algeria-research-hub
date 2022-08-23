@@ -8,7 +8,7 @@ on:
     branches: [ "main" ]
   #Trigger the workflow on daily basis (To update the funding request page)
   schedule:
-     - cron: "34 18 * * *"
+     - cron: "0 0 * * *"
 
 permissions:
   contents: read
@@ -27,6 +27,9 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
+        pip install requests
+        pip install airtable
+        pip install python-dateutil
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Run the python scrapper script
       env:
