@@ -26,8 +26,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Algeria Research Hub</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/algeriaResearchHub.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
     <!--     Fonts and icons     -->
     <link href='https://fonts.googleapis.com/css?family=Cambo|Lato:400,700' rel='stylesheet' type='text/css'>
@@ -36,52 +37,39 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="40" id="topnav">
-        <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
-        <div class="container">
-            <div class="navbar-header">
-                <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse"
-                    data-target="#example">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar bar1"></span>
-                    <span class="icon-bar bar2"></span>
-                    <span class="icon-bar bar3"></span>
-                </button>
-                <a href="index.html" class="btn btn-info btn-fill"> Home
-                </a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right navbar-uppercase">
-                    <li>
-                        <a href="examples/about.html" class="btn btn-black btn-fill">About</a>
-                    </li>
-
-                    <li>
-                        <a href="examples/learningModules.html" class="btn btn-black btn-fill">Learning Modules</a>
-                    </li>
-
-                    <li>
-                        <a href="examples/fundingOpportunities.html" class="btn btn-black btn-fill">Funding
-                            Opportunities</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-    </nav>
-
-
     <div class="section section-presentation-page">
         <div class="parallax filter filter-color-blue">
             <div class="image" style="background-image:url('assets/img/AG-map.jpeg'); filter:blur(3px); opacity: 0.6">
             </div>
-            <div class="container" id="titleheader">
-                <div class="content">
+        <nav class="navbar navbar-expand-lg navbar-fixed-top " style="z-index: 5;" id="topnav">
+        <div class="container-fluid">
+            <a href="index.html" class="btn btn-info btn-fill"> Home
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto ">
+              <li class="nav-item">
+                <a href="examples/about.html" class="btn btn-black btn-fill">About</a>
+              </li>
+              <li>
+                <a href="examples/learningModules.html" class="btn btn-black btn-fill">Learning Modules</a>
+                </li>
+
+                <li>
+                <a href="examples/fundingOpportunities.html" class="btn btn-black btn-fill">Funding
+                    Opportunities</a>
+                </li>
+    
+            </ul>
+          </div>
+        </div>
+      </nav>
+                <div class="content container" id="titleheader">
                     <h1 class="title-modern">Algeria Research Hub</h1>
                     <div class="separator separator-gold">♦</div>
                 </div>
-            </div>
         </div>
     </div>
 
@@ -123,8 +111,9 @@
                     </li>
                 </ul>
             </nav>
-            <div class="contanct-info pull-right">
-                <a href="https://crc.nd.edu/" target="Algeria Research Hub" class="btn btn-simple">contact</a>
+              <div class="contanct-info pull-right">
+                <a href="mailto: jkrauser@nd.edu" target="Algeria Research Hub" class="btn btn-simple">contact</a>
+                jkrauser@nd.edu
             </div>
         </div>
     </footer>
