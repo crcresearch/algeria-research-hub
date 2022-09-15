@@ -779,6 +779,7 @@ a.carousel-control span.fa {
   background-color: #C9972C;
   opacity: 1;
   filter: alpha(opacity=100);
+  text-decoration: none;
 }
 .btn-info.btn-fill:hover, .btn-info.btn-fill:focus, .btn-info.btn-fill:active, .btn-info.btn-fill.active, .open > .btn-info.btn-fill.dropdown-toggle,
 .navbar .navbar-nav > li > a.btn-info.btn-fill:hover,
