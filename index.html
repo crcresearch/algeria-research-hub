@@ -28,8 +28,6 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/algeriaResearchHub.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
-
     <!--     Fonts and icons     -->
     <link href='https://fonts.googleapis.com/css?family=Cambo|Lato:400,700' rel='stylesheet' type='text/css'>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -43,12 +41,16 @@
             </div>
         <nav class="navbar navbar-expand-lg navbar-fixed-top " style="z-index: 5;" id="topnav">
         <div class="container-fluid">
+            <ul class="navbar-nav ms-auto ">
+            <li class="nav-item">    
             <a href="index.html" class="btn btn-info btn-fill"> Home
             </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </li>
+            </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>  
+        </button>
+          <div class="collapse navbar-collapse " id="navbarScroll" >
             <ul class="navbar-nav ms-auto ">
               <li class="nav-item">
                 <a href="examples/about.html" class="btn btn-black btn-fill">About</a>
@@ -130,8 +132,7 @@
                 </ul>
             </nav>
             <div class="contanct-info pull-right">
-                <a href="mailto: jkrauser@nd.edu" target="Algeria Research Hub" class="btn btn-simple">contact</a>
-                jkrauser@nd.edu
+                <a href="mailto: jkrauser@nd.edu" target="Algeria Research Hub" class="btn btn-simple" title= " jkrauser@nd.edu">contact</a>
             </div>
         </div>
     </footer>
@@ -153,5 +154,6 @@
 
 <!-- makes the top nav buttons stick to the bottom of the header -->
 <script type="text/javascript" src="assets/js/stickyheader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
 
 </html>
