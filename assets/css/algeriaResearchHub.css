@@ -1399,6 +1399,9 @@ a.carousel-control span.fa {
 .filter.filter-color-blue:before {
   background: #18519E;
 }
+.filter.filter-color-custom-green:before {
+  background: #355E3B;
+}
 .filter.filter-color-purple:before {
   background: #50236F;
 }
