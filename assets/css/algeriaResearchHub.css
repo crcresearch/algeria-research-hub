@@ -150,7 +150,7 @@ small,
 }
 
 a {
-  color: #777777;
+  /* color: #777777; */
   opacity: .7;
   font-size: 14px;
 }
