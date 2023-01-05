@@ -1,0 +1,83 @@
+{% extends "base_II.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>{% block title %}About | Algeria Research Hub{% endblock title %}</title>
+    {% block css %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/algeriaResearchHub.css' %}" rel="stylesheet" />
+    <!--     Fonts and icons     -->
+    <link href='https://fonts.googleapis.com/css?family=Cambo|Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="{% static 'css/fonts/pe-icon-7-stroke.css' %}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    {% endblock css %}
+</head>
+
+<body>
+    {% block header_1 %}About{% endblock header_1 %}
+    {% block content %}
+    <div class="section section-cards section-gray">
+        <div class="title-area" >
+            <h2 style="text-align: center;">Algeria Research Hub</h2>
+            <div class="separator separator-gold">♦</div>
+            <p class="description" style="text-align: left;" > The goal of the Algeria Research Hub is to spark innovation and catalyze private sector growth in Algeria by increasing collaboration
+                and research capacity in Algerian universities and within the private sector. Initially, the Research Hub will focus on four primary 
+                areas of study: Artificial Intelligence (AI), Applied Mathematics, Applied Science (including clean energy), and Agriculture. 
+                The Pulte Institute for Global Development at the University of Notre Dame is working with Algerian university partners, including the 
+                Higher Schools of Artificial Intelligence and Mathematics at Sidi Abdellah and the Center for Development of Advanced Technologies (CDTA), to:
+                <ul>
+                  <li class="description " style="text-align: left;">  Increase cooperation among higher education, civil society, and the private sector to promote socio-economic innovation;</li>
+                
+                  <li class="description" style="text-align: left;">  Increase the capacity of higher education centers to engage in innovative and market-based research.</li>
+                
+                </ul>
+                </p>
+                <p class="description"  style="text-align: left;">Among the planned activities, the Research Hub intends to develop a research methods curriculum to improve research capacity, 
+                link Algerian researchers to mentors in Algeria and the US, provide a research administration support curriculum and implement a workshop
+                 residency program. This website will serve as a virtual platform to access training materials, research support literature, other research
+                methodology materials, funding notices and opportunities, Algerian and international research collaboration calls, and case studies.
+                </p>
+                <p class="description"  style="text-align: left;">
+                In the project's first visit to Algeria in June 2022, Notre Dame faculty from the <a href="https://lucyinstitute.nd.edu/">Lucy Family Institute for Data and Society</a>  and the
+                 <a href="https://ideacenter.nd.edu/">Notre Dame Innovation, De-Risking and Enterprise Acceleration (IDEA) Center</a> provided presentations on their institutes' work and pedagogy.
+                 These presentations and others can be found on the  <a href="resourcePage.html">Resource Page</a>. The Algeria Research Hub hopes to bring faculty
+                   from Notre Dame in early December 2022 to share information, best practices, and pedagogy related to commercialization and applied math. 
+                   Next quarter the project also hopes to host an events section, a photo gallery, and a collaborative networking space on this virtual
+                 portal.
+                
+                 
+                
+                The Algeria Research Hub is funded by the US Department of State and the US Embassy in Algiers.
+
+            </p>
+        </div>
+    </div>
+
+    {% endblock content %}
+</body>
+
+{% block javascript %}
+<!--   core js files    -->
+<script src="{% static '/js/jquery.min.js' %}" type="text/javascript"></script>
+<script src="{% static '/js/bootstrap.js' %}" type="text/javascript"></script>
+
+<!--  js library for devices recognition -->
+<script type="text/javascript" src="{% static '/js/modernizr.js' %}"></script>
+
+<!--  script for google maps   -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+<!--   file where we handle all the script from the algeriaResearchHub - Bootstrap Template   -->
+<script type="text/javascript" src="{% static '/js/algeriaResearchHub.js' %}"></script>
+
+<!-- makes the top nav buttons stick to the bottom of the header -->
+<script type="text/javascript" src="{% static '/js/stickyheader.js' %}"></script>
+{% endblock javascript %}
+
+</html>
