@@ -35,12 +35,14 @@
     {% endblock header_1 %}
 
     {% block content %}
-    <p>Initial test print</p>
 
-    {% for fund in funding %}
-        <p>Test print</p>
-        <li>{{ fund.title }}</li>
-    {% endfor %}
+    <table summary="Funding">
+        <tr><th>Title</th><th>Source</th><th>Posted Date</th><th>Closed Date</th><th>Link</th>
+        {% for fund in funding %}
+            <tr><td>{{ fund.title }}</td><td>{{ fund.source }}</td><td>{{ fund.posted_date }}</td><td>{{ fund.closed_date }}</td><td>{{ fund.link }}</td></tr>
+        {% endfor %}
+    </table>
+        
 
     {% endblock content %}
 </body>

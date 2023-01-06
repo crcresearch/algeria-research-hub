@@ -19,7 +19,7 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
     path("resourcesPage/", TemplateView.as_view(template_name="pages/resourcePage.html"), name="resourcePage"),
-    path("fundingOpportunities", TemplateView.as_view(template_name="pages/fundingOpportunities.html"), name="fundingOpportunities")
+    path("fundingOpportunities/", include("algeria.fund.urls"), name="fundingOpportunities")
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # API URLS
