@@ -41,6 +41,11 @@
             </div>
         </div>
     </div>
+
+    {% for resource in resources %}
+        <p>{{ resource.title }}</p>
+    {% endfor %}
+
     {% endblock content %}
 </body>
 
