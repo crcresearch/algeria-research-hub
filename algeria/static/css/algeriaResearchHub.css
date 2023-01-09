@@ -27,6 +27,26 @@ body {
   -webkit-font-smoothing: antialiased;
   font-size: 100%;
 }
+/*
+Added css magic to make tables in fundingOpportunities look better. 
+https://www.w3schools.com/html/html_tables.asp 
+*/
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+/* End of css table magic addition. */
 @media (min-width: 58em) {
   body {
     font-size: 100%;

@@ -37,13 +37,25 @@
     {% block content %}
 
     <table summary="Funding">
-        <tr><th>Title</th><th>Source</th><th>Posted Date</th><th>Closed Date</th><th>Link</th>
+        <tr>
+            <th>Source</th>
+            <th>Title</th>
+            <th>Posted Date</th>
+            <th>Closed Date</th>
+            <th>Link</th>
+        </tr>
         {% for fund in funding %}
-            <tr><td>{{ fund.title }}</td><td>{{ fund.source }}</td><td>{{ fund.posted_date }}</td><td>{{ fund.closed_date }}</td><td>{{ fund.link }}</td></tr>
+        <!-- Populate table with all of our available fund django models. -->
+            <tr>
+                <td>{{ fund.source }}</td>
+                <td>{{ fund.title }}</td>
+                <td>{{ fund.posted_date }}</td>
+                <td>{{ fund.closed_date }}</td>
+                <td>{{ fund.link }}</td>
+            </tr>
         {% endfor %}
     </table>
         
-
     {% endblock content %}
 </body>
 
