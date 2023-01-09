@@ -5,7 +5,7 @@ class Fund(models.Model):
     title = models.CharField(max_length=255)
     source = models.CharField(max_length=255)
     posted_date = models.DateTimeField()
-    closed_date = models.DateTimeField()
+    closed_date = models.DateTimeField(blank=True, null=True)
     link = models.URLField(max_length=255)
 
     def __str__(self):
