@@ -43,7 +43,44 @@
     </div>
 
     {% for resource in resources %}
-        <p>{{ resource.title }}</p>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h3 class="card-title">{{ resource.title }}</h3>
+
+                <h5 class="card-subtitle mb-2 text-muted"><br>Resource Type</h5>
+                <p style="font-size:14px;">{{ resource.resource_type }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Presenter(s)</h5>
+                <p style="font-size:14px;">{{ resource.presenters }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Center or Organization</h5>
+                <p style="font-size:14px;">{{ resource.organization }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Type of Presentation</h5>
+                <p style="font-size:14px;">{{ resource.presentation_type }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Technical Topics</h5>
+                <p style="font-size:14px;">{{ resource.technical_topics }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Date of Presentation</h5>
+                <p style="font-size:14px;">{{ resource.presentation_date }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Publication</h5>
+                <p style="font-size:14px;">{{ resource.publication_status }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Presentation Slides</h5>
+                <p style="font-size:14px;">{{ resource.presentation_slides }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Templates or Usefule Documents</h5>
+                <p style="font-size:14px;">{{ resource.documents }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Presentation Captions</h5>
+                <p style="font-size:14px;">{{ resource.captions }}</p>
+
+                <h5 class="card-subtitle mb-2 text-muted">Presentation Video</h5>
+                <p style="font-size:14px;">{{ resource.presentation_video }}</p>
+            </div>
+        </div>
     {% endfor %}
 
     {% endblock content %}
