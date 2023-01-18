@@ -40,7 +40,6 @@
                 <p class="description" >This Resource page is still under development, but will contain research administration training materials and presentations from researchers, institutes, and centers at the University of Notre Dame, the Higher Schools of Artificial Intelligence and Mathematics at Sidi Abdellah and the Center for Development of Advanced Technologies (CDTA).</p>
             </div>
         </div>
-        {% for resource in resources %}
         <div class="card" style="width: 22rem;display:inline-block;">
             <div class="card-body">
                 <h3 class="card-title">{{ resource.title }}</h3>
@@ -77,11 +76,8 @@
 
                 <h6 class="card-subtitle mb-2 text-muted">Presentation Video</h6>
                 <p style="font-size:13px;">{{ resource.presentation_video }}</p>
-
-                <a href="{% url 'resource_detail' pk=resource.pk %}" class="btn btn-primary stretched-link">Learn More</a>
             </div>
         </div>
-    {% endfor %}
     </div>
     {% endblock content %}
 </body>
