@@ -3,6 +3,8 @@ from django.db import models
 # Create your models here.
 class Resource(models.Model):
     title = models.CharField(max_length=255)
+    description = models.TextField()
+    image = models.ImageField(upload_to="resource_images/", null=True)
     resource_type = models.CharField(max_length=255)
     presenters = models.CharField(max_length=255, null=True, blank=True)
     organization = models.CharField(max_length=255, null=True, blank=True)

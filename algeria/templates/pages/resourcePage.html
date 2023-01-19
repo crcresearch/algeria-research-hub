@@ -48,40 +48,14 @@
         {% for resource in resources %}
         <div class="mx-auto card" style="width: 66rem;">
             <div class="card-body">
+                {% if resource.image %}
+                    <img src="{{ resource.image.url }}" width="100" height="100">
+                {% else %}
+                    <img src="{% static '/images/Image-Placeholder.jpg' %}" width="100" height="100">
+                {% endif %}
                 <h3 class="card-title">{{ resource.title }}</h3>
 
-                <h6 class="card-subtitle mb-2 text-muted"><br>Resource Type</h6>
-                <p style="font-size:13px;">{{ resource.resource_type }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Presenter(s)</h6>
-                <p style="font-size:13px;">{{ resource.presenters }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Center or Organization</h6>
-                <p style="font-size:13px;">{{ resource.organization }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Type of Presentation</h6>
-                <p style="font-size:13px;">{{ resource.presentation_type }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Technical Topics</h6>
-                <p style="font-size:13px;">{{ resource.technical_topics }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Date of Presentation</h6>
-                <p style="font-size:13px;">{{ resource.presentation_date }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Publication</h6>
-                <p style="font-size:13px;">{{ resource.publication_status }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Presentation Slides</h6>
-                <p style="font-size:13px;">{{ resource.presentation_slides }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Templates or Usefull Documents</h6>
-                <p style="font-size:13px;">{{ resource.documents }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Presentation Captions</h6>
-                <p style="font-size:13px;">{{ resource.captions }}</p>
-
-                <h6 class="card-subtitle mb-2 text-muted">Presentation Video</h6>
-                <p style="font-size:13px;">{{ resource.presentation_video }}</p>
+                <p style="font-size:13px;">{{ resource.description }}</p>
 
                 <a href="{% url 'resource_detail' pk=resource.pk %}" class="btn-sm btn-info btn-fill p-2 me-2 mr-4 stretched-link">Learn More</a>
             </div>
