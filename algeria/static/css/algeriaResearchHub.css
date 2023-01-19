@@ -32,19 +32,28 @@ Added css magic to make tables in fundingOpportunities look better.
 https://www.w3schools.com/html/html_tables.asp 
 */
 table {
+  padding: 15px;
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  overflow-y:scroll;
+  height:500px;
+  display:block;
 }
-
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
-
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+/* https://css-tricks.com/position-sticky-and-table-headers/ */
+th {
+  background: white;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
 }
 /* End of css table magic addition. */
 @media (min-width: 58em) {
