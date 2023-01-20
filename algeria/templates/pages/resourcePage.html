@@ -46,10 +46,19 @@
                 <p class="description" >This Resource page is still under development, but will contain research administration training materials and presentations from researchers, institutes, and centers at the University of Notre Dame, the Higher Schools of Artificial Intelligence and Mathematics at Sidi Abdellah and the Center for Development of Advanced Technologies (CDTA).</p>
             </div>
         </div>
+
+        <!-- https://stackoverflow.com/questions/30759024/bootstrap-button-next-to-search-box  -->
         <form class="form-inline mx-auto" style="width: 44rem">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search for Resource" aria-label="Search" name="search" >
-            <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+            <div class="form-group">
+              <div class="input-group">
+               <input class="form-control mr-sm-2" placeholder="Search for Resource" type="search" name="search">
+               <span class="input-group-btn">
+                  <button class="btn btn-outline-success" type="submit" style="margin: 0px 0px 0px 0px;">Search</button>
+               </span>
+             </div>
+           </div>
+         </form>
+        
         {% if resources %}
         {% for resource in resources %}
         <div class="mx-auto card" style="width: 66rem;">
