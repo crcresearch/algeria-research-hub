@@ -33,10 +33,9 @@ class Collaboration_Area(models.Model): ####implement fuzzy matching / standardi
         return self.name
 
 class Link(models.Model):
-    link = models.URLField(max_length = 255, null=True, blank=True)
+    link = models.URLField(max_length=255, null=True, blank=True)
     link_type = models.CharField(max_length=255)
-    link_type = models.CharField(max_length=255)
-
+    profile = models.ForeignKey(Profile, related_name='links') # foreign key for professional links
 
     def __str__(self):
         return self.name
@@ -49,9 +48,8 @@ class Profile(models.Model):
     institution = models.ManyToManyField(Institution)
     department = models.ManyToManyField(Department)
     position = models.ManyToManyField(Position)
-    email = models.EmailField
-    resume_cv_link = models.URLField(max_length = 255, null=True, blank=True)
-    professional_links = models.ManyToManyField(Link)
+    email = models.EmailField(max_length=254)
+    resume_cv_link = models.URLField(max_length=255, null=True, blank=True)
     whatsapp = models.CharField(max_length=4096)
     research_areas = models.ManyToManyField(Research_Area, related_name='primary')
     research_overview = models.TextField()
